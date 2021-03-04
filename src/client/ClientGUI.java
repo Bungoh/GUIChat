@@ -223,6 +223,7 @@ public class ClientGUI extends Application {
         private boolean isCommand(String message) {
             /*
             Commands:
+            \con:[name] - client [name] has connected.
             \dis:[name] - client [name] has disconnected.
              */
             if (message.startsWith("\\con:")) {
