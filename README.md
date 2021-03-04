@@ -1,0 +1,6 @@
+# GUIChat
+GUI Chat Application created in Java.
+
+Currently a WIP Java chat application that used JavaFX for the GUI and stardard java.net sockets to create connections. Client runs independently of Server.
+
+Client and Server releases coming soon.
