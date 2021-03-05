@@ -10,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.DataInputStream;
@@ -71,6 +70,7 @@ public class ClientGUI extends Application {
 
         onlineClientNames = FXCollections.observableArrayList();
         ListView<String> listView = new ListView<>(onlineClientNames);
+        listView.setSelectionModel(new NoSelectionModel<String>());
 
         sidebar.getChildren().addAll(sideBarLabel, listView);
         borderPane.setRight(sidebar);
@@ -79,6 +79,7 @@ public class ClientGUI extends Application {
         HBox bottomChatArea = new HBox(5);
         //TextInput
         chatInput = new TextField();
+        chatInput.setId("chat-input");
         chatInput.setAccessibleHelp("Enter message here.");
         //Button
         sendButton = new Button("Send!");
@@ -124,6 +125,7 @@ public class ClientGUI extends Application {
         //Add the BorderPane to Root Node
         mainRoot.getChildren().add(borderPane);
         Scene mainScene = new Scene(mainRoot, 600, 400);
+        mainScene.getStylesheets().add("resources/css/clientgui.css");
 
         // ----------------------- CREATE STAGE ----------------------- //
 

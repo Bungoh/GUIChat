@@ -45,6 +45,7 @@ public class ServerGUI extends Application {
 
         //Set the Scene/Stage
         Scene mainScene = new Scene(root, 600, 400);
+        mainScene.getStylesheets().add("resources/css/servergui.css");
         stage.setScene(mainScene);
         stage.setTitle("Chat Server");
         stage.show();

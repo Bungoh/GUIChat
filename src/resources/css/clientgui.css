@@ -1,0 +1,28 @@
+/*
+.root {
+    -fx-font-family: Consolas;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-control-inner-background: #242424;
+    -fx-text-fill: #c6c6c6;
+    -fx-background-color: #151515;
+    -fx-border-color: #151515;
+}
+
+.text-area {
+    -fx-border-color: #242424;
+}
+
+.text-field {
+    -fx-border-color: #242424;
+}
+
+.list-view {
+    -fx-border-color: #242424;
+    -fx-focus-traversable: false;
+}
+ */
+
+#chat-input {
+    -fx-pref-width: 200;
+}

@@ -1,0 +1,6 @@
+.text-area {
+    -fx-font-family: Consolas;
+    -fx-text-fill: #c6c6c6;
+    -fx-control-inner-background:#242424;
+    -fx-focus-color: transparent;
+}

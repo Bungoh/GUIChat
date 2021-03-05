@@ -70,7 +70,9 @@ public class ClientLogin extends Application {
         loginGrid.add(submitBox, 0, 3, 2, 1);
 
         loginRoot.getChildren().add(loginGrid);
+        
         Scene loginScene = new Scene(loginRoot, 300, 250);
+        loginScene.getStylesheets().add("resources/css/clientlogin.css");
 
         stage.setScene(loginScene);
         stage.setTitle("Chat Application");
