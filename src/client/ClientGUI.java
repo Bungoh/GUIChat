@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.ConnectException;
 import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
@@ -162,6 +163,10 @@ public class ClientGUI extends Application {
 
             //Thread to Receive Incoming Stream from Server
             new Thread(new IncomingHandler(stage)).start();
+
+        } catch (ConnectException e) {
+            stage.close();
+            new ClientLogin().start(new Stage());
 
         } catch (UnknownHostException e) {
             e.printStackTrace();

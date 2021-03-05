@@ -11,6 +11,8 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.Arrays;
+
 public class ClientLogin extends Application {
 
     @Override
@@ -37,6 +39,7 @@ public class ClientLogin extends Application {
         Button continueButton = new Button("Submit");
         continueButton.setOnAction(e -> {
 
+            //Check if all boxes are empty
             if (userInput.getText().isEmpty() || ipInput.getText().isEmpty() || portInput.getText().isEmpty()) {
                 errorLabel.setText("ERROR: Please fill out all boxes.");
                 return;
@@ -45,6 +48,12 @@ public class ClientLogin extends Application {
             String username = userInput.getText();
             String ip = ipInput.getText();
             String port = portInput.getText();
+
+            //Check for valid username
+            if (!username.matches("\\w+")) {
+                errorLabel.setText("ERROR: Invalid user name");
+                return;
+            }
 
             //Create Client GUI
             ClientGUI gui = new ClientGUI(username, ip, Integer.parseInt(port));
